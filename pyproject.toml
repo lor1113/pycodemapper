@@ -1,0 +1,43 @@
+[project]
+name = "pycodemapper"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Lorenzo Curcio", email = "lorenzocurcio2@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+pycodemapper = "pycodemapper:main"
+
+[build-system]
+requires = ["uv_build>=0.9.15,<0.10.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = [
+    "C","E","F","UP","B", "SIM","I","N","W","A", "INT", "RSE", "TC", "SLF",
+	"RET", "YTT", "ANN", "ASYNC", "S", "C4", "DTZ","LOG", "ICN", "TID", "PL",
+	"G","PIE","ARG","PTH","R","PERF","FURB","RUF", "PYI", "FLY", "TRY"
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true
+skip-magic-trailing-comma = true
+
+[tool.pyright]
+pythonVersion = "3.10"
+pythonPlatform = "all"
+typeCheckingMode = "standard"
+strictListInference = true
+strictDictionaryInference = true
+strictSetInference = true
+deprecateTypingAliases = true
+enableReachabilityAnalysis = true

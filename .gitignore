@@ -1,0 +1,7 @@
+__pycache__/
+dist/
+.venv
+uv.lock
+
+testing.py
+test_code.py
